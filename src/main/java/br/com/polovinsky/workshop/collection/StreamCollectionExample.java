@@ -19,4 +19,11 @@ public class StreamCollectionExample {
                 .map(number -> (number * 2))
                 .collect(toList());
     }
+
+    /*FlatMap*/
+    public List<Integer> getUnicaLista(List<List<Integer>> listas) {
+        return listas.stream()
+                .flatMap(l -> l.stream())
+                .collect(toList());
+    }
 }
