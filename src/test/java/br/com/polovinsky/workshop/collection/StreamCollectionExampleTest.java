@@ -23,7 +23,7 @@ public class StreamCollectionExampleTest {
     public void getNumerosPares_comListaInteiros_deveRetornarApenasNumerosPares() throws Exception {
         List<Integer> pares = ex1.getNumerosPares(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
         assertThat("Deve retornar 5 numeros", pares, hasSize(5));
-        pares.forEach(par -> System.out.println(par));
+        pares.forEach(System.out::println);
     }
 
     @Test
@@ -32,5 +32,6 @@ public class StreamCollectionExampleTest {
         assertThat("Deve retornar 2 numeros", dobro, hasSize(2));
         assertThat(dobro.get(0), Matchers.is(20));
         assertThat(dobro.get(1), Matchers.is(30));
+        dobro.forEach(System.out::println);
     }
 }

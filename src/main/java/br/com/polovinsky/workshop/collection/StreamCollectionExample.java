@@ -8,7 +8,7 @@ public class StreamCollectionExample {
 
     /*Filter*/
     public List<Integer> getNumerosPares(List<Integer> numeros) {
-        return numeros.parallelStream()
+        return numeros.stream()
                 .filter(numero -> (numero % 2) == 0)
                 .collect(toList());
     }
